@@ -1,0 +1,64 @@
+body {
+    font-family: "eurostile", sans-serif;
+}
+
+header .nav a {
+    color: #48A9A6;
+}
+
+header .nav a:hover {
+    color: #051923;
+}
+
+.bg-color{
+    background-color: #006494;
+}
+
+.box {
+    background-color: rgba(0, 53, 84);
+    margin-top: -9rem;
+}
+
+footer ul.nav a, footer ul.nav a:focus{
+    color: #fff;
+}
+
+footer ul.nav a:hover{
+    color: #48A9A6
+}
+
+.collab a:hover {
+    background-color: #48A9A6;
+    color: white;
+    border-color: #48A9A6;
+}
+
+.contact-form {
+    max-width: 770px;
+}
+
+.contact-form textarea {
+    height: 217px;
+}
+
+.contact-form textarea, .contact-form .form-control {
+    font-size: 1.5rem;
+    border-color: #E6ECF8;
+}
+
+.contact-form label {
+    color: rgba(41, 51, 71, 0.65);
+}
+
+.contact-form .btn {
+    color: #48A9A6;
+    border-color: #48A9A6;
+    background-color: #fff;
+    font-size: 1.25rem;
+}
+
+.contact-form .btn:hover {
+    color: #fff;
+    border-color: #48A9A6;
+    background-color: #48A9A6;
+}

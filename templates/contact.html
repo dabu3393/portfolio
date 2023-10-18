@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form_row %}
+{% block title %}Contact Me!{% endblock %}
+{% block content %}
+<form method="POST">
+	<div class="container py-5 mb-5">
+		<div class="text-center py-3 mt-3">
+			<h1>Thanks for getting in touch.<br>Ask me anything!</h1>
+		</div>
+		<div class="contact-form container py-5 mb-5">
+			{{ render_form_row([form.name, form.email], form_group_classes='my-3') }}
+			{{ render_form_row([form.message], form_group_classes='mb-4') }}
+			{{ render_form_row([form.submit]) }}
+		</div>
+	</div>
+</form>
+{% endblock %}

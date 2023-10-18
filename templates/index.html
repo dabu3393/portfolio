@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block title %}Davis Burrill | Portfolio{% endblock %}
+{% block content %}
+
+<!---------------------- HERO SECTION ------------------------->
+<section>
+<div class="container">
+<div class="px-4 pt-5 mt-5 text-center">
+    <h1 class="display-4 fw-bold text-body-emphasis fs-1 mb-3">Full-Stack Python Developer</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">I turn complexity into user-friendly digital excellence, one line of code at a time.</p>
+    </div>
+    <div class="overflow-hidden">
+      <div class="container">
+        <img src="../static/img/hero_img.svg" class="img-fluid mb-4" alt="Example image" width="700" height="200" loading="lazy">
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+
+<!---------------------- HELLO SECTION ------------------------->
+<section class="bg-color pb-5">
+<div class="mb-5 pb-5">
+  <div class="p-2 pb-5 text-center bg-body-tertiary">
+    <div class="container text-white py-5">
+      <h2 class="text-body-emphasis my-4 fw-semibold">Hello, I'm Davis.</h2>
+      <p class="col-lg-8 mx-auto pb-4 lead">
+        My path to becoming a Full-Stack Python Developer took a unique turn. Initially pursuing a career in neuroscience and pre-med, I soon realized I was on the wrong path and decided to take a break from formal education. During this time, I discovered a new passion – coding.
+        <br><br>
+        As a self-taught developer, I started honing my computer skills and was introduced to the world of programming, with Python as my first language. Since then, I've embraced coding with unwavering enthusiasm. I hold a certification from the Python institution and have completed around 100 projects, showcasing my dedication to mastering the language.
+        <br><br>
+        What sets me apart is my holistic understanding of Python, covering both front-end and back-end development. My journey is a testament to the power of curiosity and determination, and I'm excited to bring my unique perspective to your projects as a Full-Stack Python Developer.
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+<!---------------------- FEATURES SECTION ------------------------->
+<section>
+  <div class="container mb-5">
+  <div class="box text-white p-5 text-center bg-body-tertiary rounded-3">
+    <div class="container px-4 py-2">
+
+    <div class="row align-items-md-center g-5">
+      <div class="col d-flex flex-column align-items-md-center gap-2">
+        <h2 class="fw-bold text-body-emphasis">Full-Stack Python Developer</h2>
+        <p class="text-body-secondary">As a Full-Stack Python Developer, I've acquired a diverse skill set through an extensive course that covered a wide range of tools and technologies. My expertise includes:</p>
+      </div>
+    </div>
+      <div class="row align-items-md-center g-5 pt-5">
+      <div class="col">
+        <div class="row g-4">
+          <div class="col d-flex flex-column align-items-center gap-2">
+            <div class="d-inline-flex align-items-center justify-content-center text-white bg-color fs-4 rounded-5" style="width: 3rem; height: 3rem;">
+              <i class="bi bi-filetype-py"></i>
+            </div>
+            <h4 class="fw-semibold mb-0 text-body-emphasis">Python Programming</h4>
+            <p class="text-body-secondary">Proficient in Python 3 for scripting, automation, game development, web scraping, data science, and data visualization using libraries like Pandas, NumPy, Matplotlib, Plotly, Scikit-learn, and Seaborn.</p>
+          </div>
+
+          <div class="col d-flex flex-column align-items-center gap-2">
+            <div class="d-inline-flex align-items-center justify-content-center text-white bg-color fs-4 rounded-5" style="width: 3rem; height: 3rem;">
+              <i class="bi bi-terminal"></i>
+            </div>
+            <h4 class="fw-semibold mb-0 text-body-emphasis">Front-End Development</h4>
+            <p class="text-body-secondary">Proficient in crafting user-friendly web interfaces using HTML5, CSS3, and Bootstrap 4 to ensure seamless interactions.</p>
+          </div>
+
+          <div class="col d-flex flex-column align-items-center gap-2">
+            <div class="d-inline-flex align-items-center justify-content-center text-white bg-color fs-4 rounded-5" style="width: 3rem; height: 3rem;">
+              <i class="bi bi-database"></i>
+            </div>
+            <h4 class="fw-semibold mb-0 text-body-emphasis">Back-End Development</h4>
+            <p class="text-body-secondary">Skilled in Flask, RESTful APIs, and database management with SQLite and PostgreSQL, enabling the creation of robust server-side applications that power web projects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+</section>
+<!---------------------- PROJECTS SECTION ------------------------->
+  <div class="container my-5 py-5">
+    <h2 class="pb-2 border-bottom">Features with title</h2>
+  <div class="row row-cols-1 row-cols-md-3 mb-5 text-center py-5">
+      {% for x in range(6) %}
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>10 users included</li>
+              <li>2 GB of storage</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+    </div>
+<!---------------------- COLLAB SECTION ------------------------->
+<section class="bg-color pt-1">
+  <div class="container mt-5">
+    <div class="box text-white rounded-3 text-center py-1">
+      <div class="collab p-5 text-center bg-body-tertiary rounded-3">
+        <h2 class="text-body-emphasis mb-4 fw-semibold">Want to collab on a project?</h2>
+        <p class="col-lg-8 mx-auto lead mb-4">
+          Press the button below to access the contact form and share your ideas with me. Let's collaborate and bring your vision to life!
+        </p>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg border border-2"><i class="bi bi-chat-square-text"></i> Let's get to work!</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
