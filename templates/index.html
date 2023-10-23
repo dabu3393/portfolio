@@ -83,30 +83,29 @@
 </div>
 </section>
 <!---------------------- PROJECTS SECTION ------------------------->
-  <div class="container my-5 py-5">
-    <h2 class="pb-2 border-bottom">Features with title</h2>
-  <div class="row row-cols-1 row-cols-md-3 mb-5 text-center py-5">
-      {% for x in range(6) %}
+  <div class="container projects my-5 py-5">
+    <h2 class="pb-2 border-bottom">Projects</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-3 mb-5">
+      {% for project in projects %}
       <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Free</h4>
+        <div class="text-bg-light card text-center" style="height: 100%; border: none;">
+          <div class=" card-content card-body d-flex flex-column align-items-center justify-content-center my-3 p-4">
+            <h2>{{ project['name'] }}</h2>
+            <p class="lead">{{ project['description'] }}</p>
+            <div class="mt-auto btn-group">
+              <a type="button" class="btn btn-sm btn-outline-dark" style="--bs-btn-hover-bg: rgba(0, 53, 84)" href="{{ url_for('run_tkinter', project_id=project['project'], project_url=project['project_url']) }}" role="button" target="_blank">Try Me!</a>
+              <a type="button" class="btn btn-sm btn-outline-dark" style="--bs-btn-hover-bg: rgba(0, 53, 84)" >View Code</a>
+            </div>
           </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>10 users included</li>
-              <li>2 GB of storage</li>
-              <li>Email support</li>
-              <li>Help center access</li>
-            </ul>
-            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
-          </div>
+          <div class="overlay"></div>
         </div>
       </div>
     {% endfor %}
-    </div>
-    </div>
+  </div>
+  <div class="mb-5 pb-5 text-center">
+    <a href="{{ url_for('projects') }}" class="view-projects lead button mb-5">View All Projects</a>
+  </div>
+  </div>
 <!---------------------- COLLAB SECTION ------------------------->
 <section class="bg-color pt-1">
   <div class="container mt-5">

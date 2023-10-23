@@ -62,3 +62,84 @@ footer ul.nav a:hover{
     border-color: #48A9A6;
     background-color: #48A9A6;
 }
+
+/* Style for the image container */
+.image-container {
+    position: relative;
+}
+
+/* Style for the image */
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style for the text on top of the image */
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background color for better readability */
+    color: #ffffff; /* Text color */
+    padding: 10px; /* Optional padding for better readability */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Adjust the scaling factor as needed */
+    transition: transform 0.2s ease; /* Adjust the duration and timing function as needed */
+}
+
+.view-projects {
+    text-decoration: none;
+    position: relative;
+    color: rgba(0, 53, 84); /* Change the text color when hovered */
+}
+
+.view-projects::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Set the underline height */
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 53, 84); /* Set the underline color */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.view-projects:hover {
+    color: rgba(0, 53, 84);
+}
+
+.view-projects:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.card {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Adjust the background color and opacity as needed */
+    opacity: 0;
+    border-radius: 5px;
+    transition: opacity 0.2s ease; /* Add a transition effect for the opacity */
+}
+
+.card:hover .overlay {
+    opacity: 1; /* Make the overlay visible on hover */
+}
+
+.card-content {
+    position: relative;
+    z-index: 1; /* Place the card content on top of the overlay */
+}

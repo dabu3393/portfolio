@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Davis Burrill | Portfolio{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="container col-xxl-10 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="../static/img/projects_hero.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Interact with my Projects!</h1>
+        <p class="lead">These are only a few of the projects I have created while learning to code. Go ahead and give them a try!</p>
+      </div>
+    </div>
+  </div>
+  <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              {% for project in projects %}
+              <div class="col">
+                  <div class="text-bg-light card text-center" style="height: 100%; border: none;">
+                          <div class=" card-content card-body d-flex flex-column align-items-center justify-content-center my-3 p-4">
+                              <h2>{{ project['name'] }}</h2>
+                              <p class="lead">{{ project['description'] }}</p>
+                              <div class="mt-auto btn-group">
+                                  <a type="button" class="btn btn-sm btn-outline-dark" style="--bs-btn-hover-bg: rgba(0, 53, 84)" href="{{ url_for('run_tkinter', project_id=project['project'], project_url=project['project_url']) }}" role="button" target="_blank">Try Me!</a>
+                                  <a type="button" class="btn btn-sm btn-outline-dark" style="--bs-btn-hover-bg: rgba(0, 53, 84)" >View Code</a>
+                              </div>
+                          </div>
+                      <div class="overlay"></div>
+                  </div>
+              </div>
+              {% endfor %}
+          </div>
+      </div>
+  </div>
+
+
+</div>
+{% endblock %}
