@@ -23,8 +23,7 @@
                               <h2>{{ project['name'] }}</h2>
                               <p class="lead">{{ project['description'] }}</p>
                               <div class="mt-auto btn-group">
-                                  <a type="button" class="btn btn-sm btn-outline-dark" style="--bs-btn-hover-bg: rgba(0, 53, 84)" href="{{ url_for('run_tkinter', project_id=project['project'], project_url=project['project_url']) }}" role="button" target="_blank">Try Me!</a>
-                                  <a type="button" class="btn btn-sm btn-outline-dark" style="--bs-btn-hover-bg: rgba(0, 53, 84)" >View Code</a>
+                                  <a type="button" class="btn btn-sm btn-outline-dark" style="--bs-btn-hover-bg: rgba(0, 53, 84)" href="{{ project['github_url'] }}" target="_blank">View Code</a>
                               </div>
                           </div>
                       <div class="overlay"></div>

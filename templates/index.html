@@ -45,7 +45,7 @@
     <div class="row align-items-md-center g-5">
       <div class="col d-flex flex-column align-items-md-center gap-2">
         <h2 class="fw-bold text-body-emphasis">Full-Stack Python Developer</h2>
-        <p class="text-body-secondary">As a Full-Stack Python Developer, I've acquired a diverse skill set through an extensive course that covered a wide range of tools and technologies. My expertise includes:</p>
+        <p class="lead text-body-secondary">As a Full-Stack Python Developer, I've acquired a diverse skill set through an extensive course that covered a wide range of tools and technologies. My expertise includes:</p>
       </div>
     </div>
       <div class="row align-items-md-center g-5 pt-5">
@@ -56,7 +56,7 @@
               <i class="bi bi-filetype-py"></i>
             </div>
             <h4 class="fw-semibold mb-0 text-body-emphasis">Python Programming</h4>
-            <p class="text-body-secondary">Proficient in Python 3 for scripting, automation, game development, web scraping, data science, and data visualization using libraries like Pandas, NumPy, Matplotlib, Plotly, Scikit-learn, and Seaborn.</p>
+            <p class="lead text-body-secondary">Proficient in Python 3 for scripting, automation, game development, web scraping, data science, and data visualization using libraries like Pandas, NumPy, Matplotlib, Plotly, Scikit-learn, and Seaborn.</p>
           </div>
 
           <div class="col d-flex flex-column align-items-center gap-2">
@@ -64,7 +64,7 @@
               <i class="bi bi-terminal"></i>
             </div>
             <h4 class="fw-semibold mb-0 text-body-emphasis">Front-End Development</h4>
-            <p class="text-body-secondary">Proficient in crafting user-friendly web interfaces using HTML5, CSS3, and Bootstrap 4 to ensure seamless interactions.</p>
+            <p class="lead text-body-secondary">Proficient in crafting user-friendly web interfaces using HTML5, CSS3, and Bootstrap 4 to ensure seamless interactions.</p>
           </div>
 
           <div class="col d-flex flex-column align-items-center gap-2">
@@ -72,7 +72,7 @@
               <i class="bi bi-database"></i>
             </div>
             <h4 class="fw-semibold mb-0 text-body-emphasis">Back-End Development</h4>
-            <p class="text-body-secondary">Skilled in Flask, RESTful APIs, and database management with SQLite and PostgreSQL, enabling the creation of robust server-side applications that power web projects.</p>
+            <p class="lead text-body-secondary">Skilled in Flask, RESTful APIs, and database management with SQLite and PostgreSQL, enabling the creation of robust server-side applications that power web projects.</p>
           </div>
         </div>
       </div>
@@ -93,8 +93,8 @@
             <h2>{{ project['name'] }}</h2>
             <p class="lead">{{ project['description'] }}</p>
             <div class="mt-auto btn-group">
-              <a type="button" class="btn btn-sm btn-outline-dark" style="--bs-btn-hover-bg: rgba(0, 53, 84)" href="{{ url_for('run_tkinter', project_id=project['project'], project_url=project['project_url']) }}" role="button" target="_blank">Try Me!</a>
-              <a type="button" class="btn btn-sm btn-outline-dark" style="--bs-btn-hover-bg: rgba(0, 53, 84)" >View Code</a>
+              <a type="button" class="btn btn-sm btn-outline-dark" style="--bs-btn-hover-bg: rgba(0, 53, 84)" href="{{ url_for('run_tkinter', project_id=project['project'], project_url=project['project_url'], github_url=project['github_url']) }}" role="button" target="_blank">Try Me!</a>
+              <a type="button" class="btn btn-sm btn-outline-dark" style="--bs-btn-hover-bg: rgba(0, 53, 84)" href="{{ project['github_url'] }}" target="_blank">View Code</a>
             </div>
           </div>
           <div class="overlay"></div>
